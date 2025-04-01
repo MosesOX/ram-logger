@@ -1,8 +1,0 @@
-# Remote server to send data to (this will be your Mac's IP address)
-# Use "host.minikube.internal" to refer to the host machine running minikube
-remoteServer: "http://host.minikube.internal:5678/collect"
-
-# Image to use
-image:
-  repository: curlimages/curl
-  tag: latest
