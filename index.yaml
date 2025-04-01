@@ -3,13 +3,13 @@ entries:
   ram-logger:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-01T12:35:37.309001+03:00"
+    created: "2025-04-01T12:40:17.405075+03:00"
     description: A simple Helm chart for monitoring RAM usage and collecting system
       data
-    digest: 0c4234cc67564538c16344a0e83aec49e0efc67303f8ee7601c35fb3f3afa883
+    digest: 0f178be95b1adaacf654997a956d4085b1d2ce34da81bdcd4313992c0e9dbae1
     name: ram-logger
     type: application
     urls:
     - https://raw.githubusercontent.com/MosesOX/ram-logger/main/ram-logger-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-01T12:35:37.308655+03:00"
+generated: "2025-04-01T12:40:17.404163+03:00"
