@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Release.Name }}-ram-logger
+spec:
+  template:
+    spec:
+      containers:
+      - name: ram-logger
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        command:
+        - /bin/sh
+        - -c
+        - |
+          echo "Starting RAM usage monitoring"
+          
+          # Function to get RAM usage
+          get_ram_usage() {
+            free -m | grep Mem | awk '{printf "{\"total\": %d, \"used\": %d, \"free\": %d}", $2, $3, $4}'
+          }
+          
+          while true; do
+            # Get RAM usage and log it
+            RAM_USAGE=$(get_ram_usage)
+            echo "RAM Usage: ${RAM_USAGE}"
+
+            # Sleep for 15 seconds
+            sleep 15
+          done
+      restartPolicy: OnFailure

@@ -1,0 +1,4 @@
+# Image to use
+image:
+  repository: curlimages/curl
+  tag: latest
